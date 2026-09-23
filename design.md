@@ -67,41 +67,37 @@
 
 ```css
 :root {
-  --font-th: 'IBM Plex Sans Thai', sans-serif; /* ฟอนต์หลักทั้งหน้า */
-  --font-en: 'IBM Plex Sans', sans-serif;      /* บรรทัดภาษาอังกฤษ เช่น "FD-net Callcenter 4141" */
+  --font-th: 'Sarabun', sans-serif; /* ฟอนต์หลักทั้งหน้า */
+  --font-en: 'Sarabun', sans-serif; 
 }
 
-html { font-size: 93.75%; } /* = 15px เมื่อเบราว์เซอร์ตั้งค่าเริ่มต้น 16px และขยายตามที่ผู้ใช้ตั้งได้ */
+html { font-size: 100%; } 
 body { line-height: 1.65; }
 ```
-
 โหลดฟอนต์จาก Google Fonts ใส่ใน `<head>` ก่อน `<style>`:
 
 ```html
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Sans+Thai:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
 ```
 
-น้ำหนักที่โหลด: 300, 400, 500, 600
-น้ำหนักที่ CSS ใช้: 400, 500, 600 (หลัก), 700 (เฉพาะหัวกลุ่มผลค้นหา / คำที่ match — ไม่ได้โหลด เบราว์เซอร์จะทำตัวหนาเทียมจาก 600)
-
-Type scale ที่ใช้จริง (1rem = 15px ที่ค่าเริ่มต้นของเบราว์เซอร์):
+Type scale (1rem = 16px ที่ค่าเริ่มต้นของเบราว์เซอร์):
 
 | บทบาท | size | px | weight | line-height |
 |---|---|---|---|---|
-| H1 (hero title) | 1.55rem | 23.25 | 600 | 1.3 |
-| H1 บนจอเล็ก | 1.2rem | 18 | 600 | 1.3 |
-| H2 (intro title) | 1.3rem | 19.5 | 600 | 1.4 |
-| Section title / ชื่อหน่วยงานใน header | 1.05rem | 15.75 | 600 | 1.2 |
-| Body | 1rem | 15 | 400 | 1.65 |
-| คำอธิบาย / ย่อหน้า | .9rem | 13.5 | 400 | 1.7–1.8 |
-| Nav link | .86rem | 12.9 | 500 | — |
-| Dropdown link / footer | .85rem | 12.75 | 400 | — |
-| Eyebrow (hero) | .82rem | 12.3 | 400 | — |
-| Footer contact / sub | .78rem | 11.7 | 400 | 1.8 |
-| Eyebrow (section) | .75rem | 11.25 | 600, `letter-spacing: .1em` | — |
-| Badge | .72rem | 10.8 | 500 | — |
+| H1 (hero title) | 1.55rem | 24.8 | 600 | 1.3 |
+| H1 บนจอเล็ก | 1.2rem | 19.2 | 600 | 1.3 |
+| H2 (intro title) | 1.3rem | 20.8 | 600 | 1.4 |
+| Section title / ชื่อหน่วยงานใน header | 1.05rem | 16.8 | 600 | 1.2 |
+| Body | 1rem | 16 | 400 | 1.65 |
+| คำอธิบาย / ย่อหน้า | .9rem | 14.4 | 400 | 1.7–1.8 |
+| Nav link | .86rem | 13.76 | 500 | — |
+| Dropdown link / footer | .85rem | 13.6 | 400 | — |
+| Eyebrow (hero) | .82rem | 13.12 | 400 | — |
+| Footer contact / sub | .78rem | 12.48 | 400 | 1.8 |
+| Eyebrow (section) | .75rem | 12 | 600, `letter-spacing: .1em` | — |
+| Badge | .72rem | 11.52 | 500 | — |
 
 ### 2.3 Radius
 

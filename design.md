@@ -68,15 +68,23 @@
 ```css
 :root {
   --font-th: 'IBM Plex Sans Thai', sans-serif; /* ฟอนต์หลักทั้งหน้า */
-  --font-en: 'IBM Plex Sans', sans-serif;
+  --font-en: 'IBM Plex Sans', sans-serif;      /* บรรทัดภาษาอังกฤษ เช่น "FD-net Callcenter 4141" */
 }
 
 html { font-size: 93.75%; } /* = 15px เมื่อเบราว์เซอร์ตั้งค่าเริ่มต้น 16px และขยายตามที่ผู้ใช้ตั้งได้ */
 body { line-height: 1.65; }
 ```
 
-โหลดจาก Google Fonts (มี `preconnect` ไป `fonts.googleapis.com` และ `fonts.gstatic.com`)
-น้ำหนักที่ใช้: 400, 500, 600 (หลัก), 700 (เฉพาะหัวกลุ่มผลค้นหา / คำที่ match)
+โหลดฟอนต์จาก Google Fonts ใส่ใน `<head>` ก่อน `<style>`:
+
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Sans+Thai:wght@300;400;500;600&display=swap" rel="stylesheet">
+```
+
+น้ำหนักที่โหลด: 300, 400, 500, 600
+น้ำหนักที่ CSS ใช้: 400, 500, 600 (หลัก), 700 (เฉพาะหัวกลุ่มผลค้นหา / คำที่ match — ไม่ได้โหลด เบราว์เซอร์จะทำตัวหนาเทียมจาก 600)
 
 Type scale ที่ใช้จริง (1rem = 15px ที่ค่าเริ่มต้นของเบราว์เซอร์):
 
